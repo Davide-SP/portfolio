@@ -1,5 +1,6 @@
 import Header from "@/components/portfolio/header";
 import SelectedWorks from "@/components/portfolio/selected-works";
+import Footer from "@/components/portfolio/footer";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <main>
         <SelectedWorks />
       </main>
+      <Footer />
     </>
   );
 }
