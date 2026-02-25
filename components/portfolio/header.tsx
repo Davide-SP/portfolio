@@ -16,8 +16,8 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-white"
-      style={{ paddingLeft: 32, paddingRight: 32, paddingTop: 64, height: 64 }}
+      className="flex items-center justify-between bg-white"
+      style={{ paddingLeft: 32, paddingRight: 32, paddingTop: 32 }}
     >
       {/* Left: two-line text block */}
       <div
