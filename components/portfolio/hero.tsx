@@ -214,8 +214,9 @@ export default function Hero() {
         style={{
           position: "relative",
           width: "100%",
-          height: 520,
+          height: 480,
           overflow: "hidden",
+          marginBottom: -20,
         }}
       >
         <div ref={elDPD} style={PILL_STYLE}>
