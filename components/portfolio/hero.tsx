@@ -330,8 +330,7 @@ export default function Hero() {
           marginTop: 120,
         }}
       >
-        Digital Product Designer focused on crafting products with strong
-        attention to detail.
+        Designing digital products where user needs, business goals and technical constraints meet.
       </div>
     </div>
   );
