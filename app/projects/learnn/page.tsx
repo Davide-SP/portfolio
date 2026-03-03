@@ -14,7 +14,9 @@ export default function LearnnPage() {
         role="DIGITAL PRODUCT DESIGNER"
         company="LEARNN"
         length="3 MONTHS"
-        image="/images/learnn-cover.png"
+        image="/images/learnn/learnn-project-cover.png"
+        title="Learnn"
+        titleSize={110}
       />
       </main>
       

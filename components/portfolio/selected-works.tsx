@@ -1,10 +1,10 @@
 const WORKS = [
-  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/alfreedo-cover.png" },
-  { title: "Learnn", typology: "UX/UI Design", src: "/images/learnn-cover.png" },
-  { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/planet-cover.png" },
-  { title: "Flying Tiger Copenaghen", typology: "UI Design", src: "/images/flying-tiger-copenaghen-cover.png" },
-  { title: "Owls", typology: "UI Design", src: "/images/owls-cover.png" },
-  { title: "Creative Coding", typology: "Interaction Design", src: "/images/creative-coding-cover.png" },
+  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/home/alfreedo-cover.png" },
+  { title: "Learnn", typology: "UX/UI Design", src: "/images/home/learnn-cover.png" },
+  { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/home/planet-cover.png" },
+  { title: "Flying Tiger Copenaghen", typology: "UI Design", src: "/images/home/flying-tiger-copenaghen-cover.png" },
+  { title: "Owls", typology: "UI Design", src: "/images/home/owls-cover.png" },
+  { title: "Creative Coding", typology: "Interaction Design", src: "/images/home/creative-coding-cover.png" },
 ];
 
 const textStyle: React.CSSProperties = {
