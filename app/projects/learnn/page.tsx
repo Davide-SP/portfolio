@@ -4,6 +4,7 @@ import ProjectHero from "@/components/portfolio/project-hero";
 import Header from "@/components/portfolio/header";
 import Footer from "@/components/portfolio/footer";
 import ProjectIntro from "@/components/portfolio/project-intro";
+import SectionBlock from "@/components/portfolio/section-block";
 
 
 export default function LearnnPage() {
@@ -38,6 +39,23 @@ export default function LearnnPage() {
   Fixing layout conflicts and interaction details significantly improved users' trust in the platform.`
   ]}
 />
+      <SectionBlock title="Overview.">
+        <p>Learnn is an Italian platform offering online training aimed at helping individuals and companies grow in the digital sector. It provides more than 220 courses developed in collaboration with experts and teams from leading companies. The platform is used by a community of over 100,000 professionals and more than 300 companies, and is available on desktop, mobile web and iOS and Android apps.</p>
+        <br />
+          <p>At the time of this project, the main goal was to improve the usability and consistency of the mobile experience, which showed several friction points compared to desktop.</p>
+          <br />
+          <p>My contribution focused on identifying critical usability issues across platforms and proposing concrete design solutions to enhance clarity, accessibility and overall learning flow.</p>
+<br />
+
+<p>Shown below are selected fixes and improvements regarding:</p>
+<ul className="list-disc list-inside">
+  <li>Mobile navigation</li>
+  <li>Header and layout issues</li>
+  <li>Video player experience</li>
+  <li>Early-stage gamification</li>
+  <li>Learnn Expert section</li>
+</ul>
+      </SectionBlock>
       </main>
      
       <Footer />
