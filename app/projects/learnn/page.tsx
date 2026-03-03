@@ -5,6 +5,7 @@ import Header from "@/components/portfolio/header";
 import Footer from "@/components/portfolio/footer";
 import ProjectIntro from "@/components/portfolio/project-intro";
 import SectionBlock from "@/components/portfolio/section-block";
+import FullWidthImage from "@/components/portfolio/full-width-image";
 
 
 export default function LearnnPage() {
@@ -56,6 +57,13 @@ export default function LearnnPage() {
   <li>Learnn Expert section</li>
 </ul>
       </SectionBlock>
+      <FullWidthImage
+        src="/images/learnn/learnn-flow.png"
+        alt="Learnn project image"
+        width={1920}
+        height={1080}
+        caption="Every journey starts with a map (or User flow!)"
+      />
       </main>
      
       <Footer />
