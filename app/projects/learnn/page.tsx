@@ -6,6 +6,7 @@ import Footer from "@/components/portfolio/footer";
 import ProjectIntro from "@/components/portfolio/project-intro";
 import SectionBlock from "@/components/portfolio/section-block";
 import FullWidthImage from "@/components/portfolio/full-width-image";
+import TwoColumnMedia from "@/components/portfolio/two-column-media";
 
 
 export default function LearnnPage() {
@@ -63,6 +64,24 @@ export default function LearnnPage() {
         width={1920}
         height={1080}
         caption="Every journey starts with a map (or User flow!)"
+      />
+
+<SectionBlock title="Redesigning the mobile navigation.">
+        <p>The mobile menu presented several usability issues that directly affected users’ ability to orient themselves and move across the platform.</p>
+        <br />
+          <p>Main problems included:</p>
+<ul className="list-disc list-inside">
+  <li>A desktop-like sidebar configuration not optimized for mobile usage</li>
+  <li>Transparency and scrolling issues that allowed users to interact with content behind the menu, creating severe usability conflicts</li>
+</ul>
+<br />
+          <p>Beyond fixing technical bugs, the navigation was restructured to better fit mobile behavior: only primary items are now visible at first level, while secondary items are placed inside expandable dropdowns.</p>
+          <br />
+          <p>This resulted in a cleaner, more predictable navigation experience.</p>
+      </SectionBlock>
+      <TwoColumnMedia
+        left={{ src: "/images/learnn/menu-learnn-prima.mp4", alt: "Left image", caption: `Before: navigation issues on mobile webapp` }}
+        right={{ src: "/images/learnn/menu-learnn-dopo.mp4", alt: "Right image", caption: `After: redesigned navigation` }}
       />
       </main>
      
