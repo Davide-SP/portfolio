@@ -48,7 +48,7 @@ export default function ProjectIntro({ whatIDid, keyLearnings }: ProjectIntroPro
             What I did.
           </h2>
 
-          <div className="ml-auto" style={{ width: "60%" }}>
+          <div className="ml-auto" style={{ width: "50%" }}>
             <p style={textStyle}>
               {whatIDid}
             </p>
@@ -58,7 +58,7 @@ export default function ProjectIntro({ whatIDid, keyLearnings }: ProjectIntroPro
             Key learnings.
           </h2>
 
-          <div className="ml-auto" style={{ width: "60%" }}>
+          <div className="ml-auto" style={{ width: "50%" }}>
             <div style={textStyle}>
               {keyLearnings.map((item, index) => (
                 <div key={index} style={{ display: "flex", gap: "12px", marginBottom: "1em" }}>

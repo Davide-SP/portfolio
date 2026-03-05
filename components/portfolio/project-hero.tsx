@@ -87,7 +87,7 @@ export default function ProjectHero({
           style={{
             fontFamily: FONT_TIKTOK,
             fontSize: titleSize,
-            fontWeight: 500,
+            fontWeight: 600,
             color: "#000000",
             letterSpacing: "-0.06em",
           }}
