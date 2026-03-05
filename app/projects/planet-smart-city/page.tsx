@@ -13,7 +13,7 @@ export default function PlanetSmartCityPage() {
       <Header />
       <main>
         <ProjectHero
-          role="UX/UI & SERVICE DESIGNER"
+          role="DIGITAL PRODUCT DESIGNER"
           company="PLANET SMART CITY"
           length="3 MONTHS"
           image="/images/planet/planet-cover.png"
@@ -36,19 +36,19 @@ Turning abstract environmental data into meaningful insights is a core UX challe
           ]}
         />
         <SectionBlock title="Overview.">
-          <p style={{ marginBottom: "1em" }}>Planet Smart City partnered with EOT – Energy of Things to develop a cloud-based Energy Management platform aimed at helping smart neighbourhoods monitor, analyze and optimize energy consumption.</p>
-          <p style={{ marginBottom: "1em" }}>The platform supports different user profiles, from residents to condominium administrators and facility managers, combining real-time data, predictive analytics and sustainability insights into a single system.</p>
+          <p >Planet Smart City partnered with EOT – Energy of Things to develop a cloud-based Energy Management platform aimed at helping smart neighbourhoods monitor, analyze and optimize energy consumption.</p>
+          <p >The platform supports different user profiles, from residents to condominium administrators and facility managers, combining real-time data, predictive analytics and sustainability insights into a single system.</p>
           <p>My role focused on designing how these complex data streams could be translated into usable and meaningful experiences across web and mobile.</p>
         </SectionBlock>
         <SectionBlock title="Context & challenges.">
-          <p style={{ marginBottom: "1em" }}>The project involved designing for a multi-stakeholder ecosystem, where users with very different needs had to interact with the same data infrastructure.</p>
-          <ul className="list-disc list-inside">
+          <p>The project involved designing for a multi-stakeholder ecosystem, where users with very different needs had to interact with the same data infrastructure.</p>
+          <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
             <li>Supporting real-time monitoring while keeping interfaces readable</li>
             <li>Enabling both high-level overviews and detailed breakdowns</li>
             <li>Balancing economic insights with environmental impact indicators</li>
             <li>Making energy data understandable also for non-technical users</li>
           </ul>
-          <p style={{ marginTop: "1em" }}>This required a careful balance between analytical depth and everyday usability.</p>
+          <p>This required a careful balance between analytical depth and everyday usability.</p>
         </SectionBlock>
         <FullWidthImage
           src="/images/planet/planet-sensori.webp"
@@ -59,9 +59,9 @@ Turning abstract environmental data into meaningful insights is a core UX challe
         caption=""
         />
         <SectionBlock title="Designing for complex data.">
-          <p style={{ marginBottom: "1em" }}>A core focus of the project was defining how energy data could be structured, visualized and navigated across different levels of granularity.</p>
-          <p style={{ marginBottom: "1em" }}>Rather than displaying raw metrics, the goal was to guide users through progressive layers of information: from high-level summaries to detailed consumption patterns and carbon footprint analysis.</p>
-          <ul className="list-disc list-inside">
+          <p >A core focus of the project was defining how energy data could be structured, visualized and navigated across different levels of granularity.</p>
+          <p >Rather than displaying raw metrics, the goal was to guide users through progressive layers of information: from high-level summaries to detailed consumption patterns and carbon footprint analysis.</p>
+          <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
             <li>Grouping related KPIs into meaningful clusters</li>
             <li>Highlighting trends and anomalies instead of isolated values</li>
             <li>Supporting comparisons across time, buildings and user groups</li>
@@ -77,7 +77,7 @@ Turning abstract environmental data into meaningful insights is a core UX challe
         />
         <SectionBlock title="UX & interaction principles.">
           <p>To support usability across such a complex system, a few core principles guided the design:</p>
-          <ul className="list-disc list-inside" >
+          <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
             <li>Progressive disclosure to avoid cognitive overload</li>
             <li>Consistent interaction patterns between web and mobile</li>
             <li>Visual hierarchy to prioritize what requires attention</li>
@@ -96,7 +96,7 @@ Turning abstract environmental data into meaningful insights is a core UX challe
         caption="Energy management mobile"
         />
         <SectionBlock title="Outcome.">
-          <p style={{ marginBottom: "1em" }}>The platform is currently used in more than 80 residential districts worldwide, enabling proactive energy management and average consumption reductions of up to 15% within the first year.</p>
+          <p>The platform is currently used in more than 80 residential districts worldwide, enabling proactive energy management and average consumption reductions of up to 15% within the first year.</p>
           <p>Administrators gain access to real-time alerts and exportable ESG KPIs, while residents can better understand their impact and adopt more sustainable behaviours.</p>
         </SectionBlock>
       </main>

@@ -50,7 +50,7 @@ export default function LearnnPage() {
 <br />
 
 <p>Shown below are selected fixes and improvements regarding:</p>
-<ul className="list-disc list-inside">
+<ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>Mobile navigation</li>
   <li>Header and layout issues</li>
   <li>Video player experience</li>
@@ -71,7 +71,7 @@ export default function LearnnPage() {
         <p>The mobile menu presented several usability issues that directly affected users’ ability to orient themselves and move across the platform.</p>
         <br />
           <p>Main problems included:</p>
-<ul className="list-disc list-inside">
+<ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>A desktop-like sidebar configuration not optimized for mobile usage</li>
   <li>Transparency and scrolling issues that allowed users to interact with content behind the menu, creating severe usability conflicts</li>
 </ul>
@@ -90,7 +90,7 @@ export default function LearnnPage() {
         <p>The mobile header generated frequent layout conflicts that negatively affected both readability and interaction.</p>
         <br />
           <p>The main causes were:</p>
-<ul className="list-disc list-inside">
+<ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>The connected users widget overlapping with section titles</li>
   <li>The search bar opening to the right and pushing content out of view</li>
 </ul>
@@ -116,7 +116,7 @@ While the desktop version showed no major issues, the mobile experience was not 
 </p>
         <br />
           <p>By analyzing patterns from leading services such as Netflix, YouTube, Domestika and MasterClass, and adapting them to Learnn’s learning context, we introduced several improvements:</p>
-<ul className="list-disc list-inside">
+<ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>Relocating key controls directly onto the video surface for faster access</li>
   <li>Highlighting frequently used features such as transcripts and notes</li>
   <li>Reducing the prominence of less critical actions, like error reporting</li>
@@ -134,7 +134,7 @@ While the desktop version showed no major issues, the mobile experience was not 
         <p>Learnn Expert is the section dedicated to showcasing instructors and their content, acting as a bridge between users and the educational value of the platform.</p>
         <br />
 <p>My contribution focused on defining the basic information architecture and designing the UI for both:</p>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>The main Expert hub</li>
   <li>Individual expert profile pages</li>
 </ul>
@@ -142,14 +142,14 @@ While the desktop version showed no major issues, the mobile experience was not 
           <p>The goal was to make content exploration intuitive and to clearly communicate each expert’s value and specialization.</p>
           <br />
           <p>From an information architecture perspective, the work involved:</p>
-<ul className="list-disc list-inside">
+<ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>Structuring content hierarchies between experts, courses and categories</li>
   <li>Defining navigation patterns to move smoothly between educational topics and individual profiles</li>
   <li>Reducing cognitive load by grouping related information and prioritizing key elements</li>
 </ul>
 <br />
           <p>On the UI side, the focus was on:</p>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>Creating a consistent visual language aligned with the rest of the platform</li>
   <li>Ensuring readability and visual hierarchy</li>
   <li>Supporting both content discovery and personal branding of each expert</li>
@@ -170,7 +170,7 @@ At that stage, Learnn’s infrastructure was being upgraded to support richer be
 In parallel, we designed an MVP based on the available data to start validating engagement mechanisms early.</p>
         <br />
 <p>The concept consists of a simple widget showing:</p>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside" style={{ lineHeight: "1.2em"}}>
   <li>User streaks</li>
   <li>Time remaining to maintain them</li>
   <li>A direct CTA to continue learning</li>

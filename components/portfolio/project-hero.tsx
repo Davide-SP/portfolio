@@ -48,7 +48,7 @@ export default function ProjectHero({
           <div style={VALUE_STYLE}>{role}</div>
         </div>
         <div style={{display: "flex", gap: 8}}>
-          <div style={LABEL_STYLE}>CLIENT:</div>
+          <div style={LABEL_STYLE}>COMPANY:</div>
           <div style={VALUE_STYLE}>{company}</div>
         </div>
         <div style={{display: "flex", gap: 8}}>
