@@ -1,10 +1,10 @@
 const WORKS = [
-  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/home/alfreedo-cover.png" },
-  { title: "Learnn", typology: "UX/UI Design", src: "/images/home/learnn-cover.png" },
-  { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/home/planet-cover.png" },
-  { title: "Flying Tiger Copenaghen", typology: "UI Design", src: "/images/home/flying-tiger-copenaghen-cover.png" },
-  { title: "Owls", typology: "UI Design", src: "/images/home/owls-cover.png" },
-  { title: "Creative Coding", typology: "Interaction Design", src: "/images/home/creative-coding-cover.png" },
+  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/home/alfreedo-cover.png", href: "/projects/alfreedo" },
+  { title: "Learnn", typology: "UX/UI Design", src: "/images/home/learnn-cover.png", href: "/projects/learnn" },
+  { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/home/planet-cover.png", href: "/projects/planet-smart-city" },
+  { title: "Flying Tiger Copenaghen", typology: "UI Design", src: "/images/home/flying-tiger-copenaghen-cover.png", href: "/projects/flying-tiger-copenaghen" },
+  { title: "Owls", typology: "UI Design", src: "/images/home/owls-cover.png", href: "/projects/owls" },
+  { title: "Creative Coding", typology: "Interaction Design", src: "/images/home/creative-coding-cover.png", href: "/projects/creative-coding" },
 ];
 
 const textStyle: React.CSSProperties = {
@@ -34,10 +34,10 @@ export default function SelectedWorks() {
         style={{ marginBottom: 96 }}
        className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12"
       >
-        {WORKS.map(({ title, typology, src }, i) => (
+        {WORKS.map(({ title, typology, src, href }, i) => (
           <a
             key={i}
-            href="#"
+            href={href}
             style={{ textDecoration: "none", display: "block" }}
           >
             {/* Image container — overflow hidden keeps the frame fixed */}
