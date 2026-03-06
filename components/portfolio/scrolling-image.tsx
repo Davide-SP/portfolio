@@ -9,6 +9,7 @@ interface ScrollingImageProps {
   height: number;
   caption?: string;
   maxWidth?: string;
+  scrollHint?: boolean;
 }
 
 const captionStyle: React.CSSProperties = {
@@ -19,45 +20,41 @@ const captionStyle: React.CSSProperties = {
   marginTop: "8px",
 };
 
-export default function ScrollingImage({ src, alt, width, height, caption, maxWidth }: ScrollingImageProps) {
+export default function ScrollingImage({ src, alt, width, height, caption, maxWidth, scrollHint }: ScrollingImageProps) {
   return (
-    <>
-      <style>{`
-        .scrolling-frame .scrolling-image {
-          transform: translateY(0);
-          transition: transform 4s ease-in-out;
-        }
-        .scrolling-frame:hover .scrolling-image {
-          transform: translateY(calc(-100% + 600px));
-        }
-      `}</style>
-      <div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }}>
-        <div style={{ width: maxWidth ?? "100%", margin: "0 auto" }}>
-          <div
-            className="scrolling-frame"
+    <div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }}>
+      <div style={{ width: maxWidth ?? "100%", margin: "0 auto" }}>
+        <div
+          style={{
+            border: "8px solid #000000",
+            borderRadius: "8px",
+            overflowY: "auto",
+            height: "600px",
+          }}
+        >
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
             style={{
-              border: "8px solid #000000",
-              borderRadius: "8px",
-              overflow: "hidden",
-              height: "600px",
+              width: "100%",
+              height: "auto",
+              display: "block",
             }}
-          >
-            <Image
-              className="scrolling-image"
-              src={src}
-              alt={alt}
-              width={width}
-              height={height}
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-              }}
-            />
-          </div>
-          {caption && <p style={captionStyle}>{caption}</p>}
+          />
         </div>
+        {(caption || scrollHint) && (
+          <p style={captionStyle}>
+            {caption}
+            {scrollHint && (
+              <span style={{ fontStyle: "normal", fontWeight: 600, marginLeft: caption ? "12px" : undefined }}>
+                ↓ Scroll to explore
+              </span>
+            )}
+          </p>
+        )}
       </div>
-    </>
+    </div>
   );
 }
