@@ -1,7 +1,7 @@
 const WORKS = [
-  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/home/alfreedo-cover.png", href: "/projects/alfreedo" },
   { title: "Learnn", typology: "UX/UI Design", src: "/images/home/learnn-cover.png", href: "/projects/learnn" },
   { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/home/planet-cover.png", href: "/projects/planet-smart-city" },
+  { title: "Alfreedo", typology: "Service & UX/UI Design", src: "/images/home/alfreedo-cover.png", href: "/projects/alfreedo" },
   { title: "Flying Tiger Copenaghen", typology: "UI Design", src: "/images/home/flying-tiger-copenaghen-cover.png", href: "/projects/flying-tiger-copenaghen" },
   { title: "Owls", typology: "UI Design", src: "/images/home/owls-cover.png", href: "/projects/owls" },
   { title: "Creative Coding", typology: "Interaction Design", src: "/images/home/creative-coding-cover.png", href: "/projects/creative-coding" },
@@ -12,22 +12,28 @@ const textStyle: React.CSSProperties = {
   letterSpacing: "-0.02em",
 };
 
-export default function SelectedWorks() {
+interface SelectedWorksProps {
+  showTitle?: boolean;
+}
+
+export default function SelectedWorks({ showTitle = true }: SelectedWorksProps) {
   return (
     <section style={{ paddingLeft: 64, paddingRight: 64, paddingTop: 128}}>
       {/* Header */}
-      <h2
-        style={{
-          ...textStyle,
-          fontSize: "clamp(44px, 5vw, 55px)",
-          fontWeight: 400,
-          color: "#000000",
-          margin: 0,
-          marginBottom: 64,
-        }}
-      >
-        Selected Works
-      </h2>
+      {showTitle && (
+        <h2
+          style={{
+            ...textStyle,
+            fontSize: "clamp(44px, 5vw, 55px)",
+            fontWeight: 400,
+            color: "#000000",
+            margin: 0,
+            marginBottom: 64,
+          }}
+        >
+          Selected Works
+        </h2>
+      )}
 
       {/* Grid */}
       <div
