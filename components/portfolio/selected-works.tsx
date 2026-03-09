@@ -24,7 +24,7 @@ export default function SelectedWorks({ showTitle = true }: SelectedWorksProps) 
         <h2
           style={{
             ...textStyle,
-            fontSize: "clamp(44px, 5vw, 55px)",
+            fontSize: "clamp(44px, 5vw, 50px)",
             fontWeight: 400,
             color: "#000000",
             margin: 0,

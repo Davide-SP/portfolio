@@ -4,6 +4,7 @@ import Header from "@/components/portfolio/header";
 import Footer from "@/components/portfolio/footer";
 import PageTitle from "@/components/portfolio/page-title";
 import AboutHero from "@/components/portfolio/about-hero";
+import WhatICanDo from "@/components/portfolio/what-i-can-do";
 
 export default function AboutPage() {
   return (
@@ -33,6 +34,7 @@ export default function AboutPage() {
             <li>Always up to date on memes, probably the only reason I'm still on social media</li>
           </ul>
         </AboutHero>
+        <WhatICanDo />
       </main>
       <Footer />
     </>
