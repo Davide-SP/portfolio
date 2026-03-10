@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -15,9 +16,15 @@ export default function Header() {
     typeof window !== "undefined" ? window.location.pathname : "/";
 
   return (
-    <header
+    <motion.header
       className="flex items-center justify-between bg-white"
       style={{ paddingLeft: 32, paddingRight: 32, paddingTop: 32 }}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ 
+        duration: 1.2, 
+        ease: [0.42, 0.21, 0, 1] 
+      }}
     >
       {/* Left: two-line text block */}
       <div
@@ -110,6 +117,6 @@ export default function Header() {
           />
         </button>
       </div>
-    </header>
+    </motion.header>
   );
 }

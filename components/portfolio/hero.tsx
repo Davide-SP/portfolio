@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Matter from "matter-js";
 import { ArrowDown } from "lucide-react";
 
@@ -273,7 +274,15 @@ export default function Hero() {
       </div>
 
       {/* Name section */}
-      <div style={{ width: "100%", overflow: "hidden", marginTop: 56 }}>
+      <motion.div
+        style={{ width: "100%", overflow: "hidden", marginTop: 56 }}
+        initial={{ y: 175, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ 
+          duration: 1.2, 
+          ease: [0.42, 0.21, 0, 1] 
+        }}
+      >
         <div
           style={{
             fontFamily: FONT_TIKTOK,
@@ -292,10 +301,15 @@ export default function Hero() {
         >
           DAVIDE SPATARO
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll button — centrato */}
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 24 }}>
+      <motion.div
+        style={{ display: "flex", justifyContent: "center", marginTop: 24 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeOut", delay: 0.8 }}
+      >
         <button
           onClick={scrollToDescription}
           style={{
@@ -314,7 +328,7 @@ export default function Hero() {
           Scroll to see more
           <ArrowDown size={20} color="#000000" />
         </button>
-      </div>
+      </motion.div>
 
       {/* Description section */}
       <div
