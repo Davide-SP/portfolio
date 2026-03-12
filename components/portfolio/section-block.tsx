@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface SectionBlockProps {
   title: string;
   children: React.ReactNode;
@@ -22,17 +24,31 @@ const textStyle: React.CSSProperties = {
   lineHeight: "1.2em",
 };
 
+const fadeUpTitle = {
+  initial: { opacity: 0, y: 100 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
+const fadeUpText = {
+  initial: { opacity: 0, y: 140 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
 export default function SectionBlock({ title, children }: SectionBlockProps) {
   return (
     <div style={{ paddingTop: "32px", paddingBottom: "64px", paddingLeft: "96px", paddingRight: "96px" }}>
       <div className="flex flex-col" style={{ gap: "70px" }}>
-        <h2 className="text-left" style={titleStyle}>
+        <motion.h2 className="text-left" style={titleStyle} {...fadeUpTitle}>
           {title}
-        </h2>
+        </motion.h2>
 
-        <div className="ml-auto" style={{ width: "50%", ...textStyle }}>
+        <motion.div className="ml-auto" style={{ width: "50%", ...textStyle }} {...fadeUpText}>
           {children}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

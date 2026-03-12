@@ -1,13 +1,22 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface QuoteBlockProps {
   quote: string;
   subtext?: string;
 }
 
+const fadeUp = {
+  initial: { opacity: 0, y: 60 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
 export default function QuoteBlock({ quote, subtext }: QuoteBlockProps) {
   return (
-    <div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "0" }}>
+    <motion.div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "0" }} {...fadeUp}>
       <p
         style={{
           paddingLeft: 136,
@@ -38,6 +47,6 @@ export default function QuoteBlock({ quote, subtext }: QuoteBlockProps) {
           {subtext}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 }

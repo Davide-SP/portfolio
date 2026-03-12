@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface MediaItem {
   src: string;
@@ -64,13 +65,20 @@ function MediaColumn({ item }: { item: MediaItem }) {
   );
 }
 
+const fadeUp = {
+  initial: { opacity: 0, y: 160 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
 export default function TwoColumnMedia({ left, right }: TwoColumnMediaProps) {
   return (
-    <div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "64px" }}>
+    <motion.div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "64px" }} {...fadeUp}>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
         <MediaColumn item={left} />
         <MediaColumn item={right} />
       </div>
-    </div>
+    </motion.div>
   );
 }

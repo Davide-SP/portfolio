@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface ScrollingImageProps {
   src: string;
@@ -20,9 +21,16 @@ const captionStyle: React.CSSProperties = {
   marginTop: "8px",
 };
 
+const fadeUp = {
+  initial: { opacity: 0, y: 160 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
 export default function ScrollingImage({ src, alt, width, height, caption, maxWidth, scrollHint }: ScrollingImageProps) {
   return (
-    <div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }}>
+    <motion.div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }} {...fadeUp}>
       <div style={{ width: maxWidth ?? "100%", margin: "0 auto" }}>
         <div
           style={{
@@ -55,6 +63,6 @@ export default function ScrollingImage({ src, alt, width, height, caption, maxWi
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

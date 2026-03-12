@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface FullWidthImageProps {
   src: string;
@@ -19,9 +20,16 @@ const captionStyle: React.CSSProperties = {
   marginTop: "8px",
 };
 
+const fadeUp = {
+  initial: { opacity: 0, y: 160 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 1.4, ease: [0, 0.56, 0.26, 0.97] as [number, number, number, number] }
+}
+
 export default function FullWidthImage({ src, alt, width, height, caption, maxWidth }: FullWidthImageProps) {
   return (
-    <div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }}>
+    <motion.div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }} {...fadeUp}>
       <Image
         src={src}
         alt={alt}
@@ -39,6 +47,6 @@ export default function FullWidthImage({ src, alt, width, height, caption, maxWi
       {caption && (
         <p style={captionStyle}>{caption}</p>
       )}
-    </div>
+    </motion.div>
   );
 }
