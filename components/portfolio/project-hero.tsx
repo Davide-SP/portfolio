@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const FONT_TIKTOK = "'TikTok Sans', sans-serif";
 
@@ -40,7 +41,12 @@ export default function ProjectHero({
   return (
     <div style={{ width: "100%", paddingLeft: 64, paddingRight: 64, paddingTop: 32, marginBottom: 72 }}>
       {/* Metadata row */}
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
+      <motion.div
+        style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.44, 0, 0.56, 1], delay: 0.6 }}
+      >
 
       <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "flex-start" }}>
         <div style={{display: "flex", gap: 8}}>
@@ -57,10 +63,10 @@ export default function ProjectHero({
         </div>
       </div>
 
-      </div>
+      </motion.div>
 
       {/* Title + Hero image grid */}
-      <div
+      <motion.div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -68,6 +74,9 @@ export default function ProjectHero({
           marginTop: 24,
           alignItems: "center"
         }}
+        initial={{ y: 175, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: [0.42, 0.21, 0, 1] }}
       >
         {/* Hero image */}
         <div style={{ width: "100%" }}>
@@ -94,8 +103,8 @@ export default function ProjectHero({
         >
           {title}
         </div>
-  
-      </div>
+
+      </motion.div>
         
 
 
