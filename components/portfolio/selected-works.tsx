@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const WORKS = [
   { title: "Learnn", typology: "UX/UI Design", src: "/images/home/learnn-cover.png", href: "/projects/learnn" },
   { title: "Smart Energy Management", typology: "UX/UI Design", src: "/images/home/planet-cover.png", href: "/projects/planet-smart-city" },
@@ -36,9 +40,13 @@ export default function SelectedWorks({ showTitle = true }: SelectedWorksProps) 
       )}
 
       {/* Grid */}
-      <div
+      <motion.div
         style={{ marginBottom: 96 }}
-       className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.4, ease: [0, 0.56, 0.26, 0.97] }}
       >
         {WORKS.map(({ title, typology, src, href }, i) => (
           <a
@@ -89,7 +97,7 @@ export default function SelectedWorks({ showTitle = true }: SelectedWorksProps) 
             </p>
           </a>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -16,7 +16,7 @@ const fadeUp = {
 
 export default function PageTitle({ line1, line2, fontSize = 174 }: PageTitleProps) {
   return (
-    <div style={{ padding: "96px" }}>
+    <div style={{ paddingTop: 96, paddingLeft: 96, paddingRight: 96, paddingBottom: 80 }}>
       <div style={{ overflow: "hidden" }}>
         <motion.div
           style={{

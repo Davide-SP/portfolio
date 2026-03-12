@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface AboutHeroProps {
   src: string;
@@ -12,7 +13,13 @@ interface AboutHeroProps {
 
 export default function AboutHero({ src, alt, children, imageWidth = "100%", textWidth = "100%" }: AboutHeroProps) {
   return (
-    <div style={{ padding: "96px" }}>
+    <motion.div
+      style={{ padding: "96px" }}
+      initial={{ opacity: 0, y: 160 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.4, ease: [0, 0.56, 0.26, 0.97] }}
+    >
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", alignItems: "center" }}>
         {/* Left column: image */}
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -43,6 +50,6 @@ export default function AboutHero({ src, alt, children, imageWidth = "100%", tex
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

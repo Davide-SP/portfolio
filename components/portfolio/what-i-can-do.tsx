@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const SKILLS = [
   { title: "UX/UI DESIGN", src: "/images/home/flying-tiger-copenaghen-cover.png" },
@@ -37,11 +38,15 @@ export default function WhatICanDo() {
           const rotation = i % 2 === 0 ? "-5deg" : "5deg";
 
           return (
-            <div
+            <motion.div
               key={title}
               style={{ position: "relative", textAlign: "center", zIndex: hoveredIndex === i ? 10 : 1 }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.4, ease: [0, 0.56, 0.26, 0.97] }}
             >
               {/* Hover rectangle — behind the title */}
               <div
@@ -87,7 +92,7 @@ export default function WhatICanDo() {
               >
                 {title}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
