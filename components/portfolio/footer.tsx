@@ -23,15 +23,13 @@ export default function Footer() {
 
   return (
     <footer
-      className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-0"
+      className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 md:gap-0 px-8 md:px-16 py-16"
       style={{
         width: "100%",
-        padding: "64px",
         fontFamily: "'TikTok Sans', sans-serif",
       }}
     >
       <div
-        className="md:pl-8"
         style={{ display: "flex", alignItems: "center", gap: "4px" }}
       >
         <span style={{ fontSize: "20px", color: "#000000" }}>LET&apos;S GET IN TOUCH</span>
@@ -80,11 +78,11 @@ export default function Footer() {
       </div>
 
       <div
-        className="md:pr-8"
         style={{
           fontSize: "16px",
           color: "#8F8F8F",
           fontFamily: "'TikTok Sans', sans-serif",
+          fontVariantNumeric: "tabular-nums",
         }}
       >
         {time}
