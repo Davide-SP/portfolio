@@ -22,7 +22,7 @@ interface SelectedWorksProps {
 
 export default function SelectedWorks({ showTitle = true }: SelectedWorksProps) {
   return (
-    <section style={{ paddingLeft: 64, paddingRight: 64, paddingTop: 128}}>
+    <section className="px-8 md:px-16" style={{ paddingTop: 128}}>
       {/* Header */}
       {showTitle && (
         <h2
