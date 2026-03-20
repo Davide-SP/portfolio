@@ -16,13 +16,11 @@ const fadeUp = {
 
 export default function QuoteBlock({ quote, subtext }: QuoteBlockProps) {
   return (
-    <motion.div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "0" }} {...fadeUp}>
+    <motion.div className="px-8 md:px-24 py-8 md:py-0" {...fadeUp}>
       <p
+        className="px-0 md:px-[136px] text-[20px] md:text-[26px]"
         style={{
-          paddingLeft: 136,
-          paddingRight: 136,
           fontFamily: "'TikTok Sans', sans-serif",
-          fontSize: "26px",
           fontWeight: 600,
           color: "#000000",
           letterSpacing: "-0.03em",
