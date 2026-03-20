@@ -26,7 +26,6 @@ function boldFirstWord(text: string): React.ReactNode {
 
 const titleStyle: React.CSSProperties = {
   fontFamily: "'TikTok Sans', sans-serif",
-  fontSize: "30px",
   fontWeight: 500,
   color: "#FFFFFF",
   letterSpacing: "-0.03em",
@@ -59,24 +58,24 @@ const fadeUpText = {
 
 export default function ProjectIntro({ whatIDid, keyLearnings }: ProjectIntroProps) {
   return (
-    <div style={{ padding: "64px 56px"}}>
+    <div className="px-8 md:px-14 py-8 md:py-16">
       <div style={{ backgroundColor: "#000000", padding: "40px", borderRadius: 8  }}>
         <div className="flex flex-col" style={{ gap: "70px" }}>
-          <motion.h2 className="text-left" style={titleStyle} {...fadeUpTitle}>
+          <motion.h2 className="text-left text-[26px] md:text-[30px]" style={titleStyle} {...fadeUpTitle}>
             What I did.
           </motion.h2>
 
-          <motion.div className="ml-auto" style={{ width: "50%" }} {...fadeUpText}>
+          <motion.div className="ml-auto w-4/5 md:w-1/2" {...fadeUpText}>
             <p style={textStyle}>
               {whatIDid}
             </p>
           </motion.div>
 
-          <motion.h2 className="text-left" style={titleStyle} {...fadeUpTitle}>
+          <motion.h2 className="text-left text-[26px] md:text-[30px]" style={titleStyle} {...fadeUpTitle}>
             Key learnings.
           </motion.h2>
 
-          <motion.div className="ml-auto" style={{ width: "50%" }} {...fadeUpText}>
+          <motion.div className="ml-auto w-4/5 md:w-1/2" {...fadeUpText}>
             <div style={textStyle}>
               {keyLearnings.map((item, index) => (
                 <div key={index} style={{ display: "flex", gap: "12px", marginBottom: "1em" }}>
