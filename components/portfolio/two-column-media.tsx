@@ -74,8 +74,8 @@ const fadeUp = {
 
 export default function TwoColumnMedia({ left, right }: TwoColumnMediaProps) {
   return (
-    <motion.div style={{ paddingTop: "0", paddingLeft: "96px", paddingRight: "96px", paddingBottom: "64px" }} {...fadeUp}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+    <motion.div className="px-8 md:px-24 pt-0 pb-8 md:pb-16" {...fadeUp}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-5">
         <MediaColumn item={left} />
         <MediaColumn item={right} />
       </div>

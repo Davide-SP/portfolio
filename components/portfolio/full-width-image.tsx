@@ -29,7 +29,7 @@ const fadeUp = {
 
 export default function FullWidthImage({ src, alt, width, height, caption, maxWidth }: FullWidthImageProps) {
   return (
-    <motion.div style={{ paddingLeft: "96px", paddingRight: "96px", paddingTop: "0", paddingBottom: "70px" }} {...fadeUp}>
+    <motion.div className="px-8 md:px-24 pt-0 pb-8 md:pb-[70px]" {...fadeUp}>
       <Image
         src={src}
         alt={alt}

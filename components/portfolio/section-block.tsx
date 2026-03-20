@@ -9,7 +9,6 @@ interface SectionBlockProps {
 
 const titleStyle: React.CSSProperties = {
   fontFamily: "'TikTok Sans', sans-serif",
-  fontSize: "30px",
   fontWeight: 500,
   color: "#000000",
   letterSpacing: "-0.03em",
@@ -40,13 +39,13 @@ const fadeUpText = {
 
 export default function SectionBlock({ title, children }: SectionBlockProps) {
   return (
-    <div style={{ paddingTop: "32px", paddingBottom: "64px", paddingLeft: "96px", paddingRight: "96px" }}>
+    <div className="px-8 md:px-24 pt-8 md:pt-8 pb-16 md:pb-16">
       <div className="flex flex-col" style={{ gap: "70px" }}>
-        <motion.h2 className="text-left" style={titleStyle} {...fadeUpTitle}>
+        <motion.h2 className="text-left text-[26px] md:text-[30px]" style={titleStyle} {...fadeUpTitle}>
           {title}
         </motion.h2>
 
-        <motion.div className="ml-auto" style={{ width: "50%", ...textStyle }} {...fadeUpText}>
+        <motion.div className="ml-auto w-4/5 md:w-1/2" style={{ ...textStyle }} {...fadeUpText}>
           {children}
         </motion.div>
       </div>
