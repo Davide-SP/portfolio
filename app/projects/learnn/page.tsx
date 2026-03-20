@@ -21,6 +21,7 @@ export default function LearnnPage() {
         image="/images/learnn/learnn-project-cover.png"
         title="Learnn"
         titleSize={110}
+        mobileTitleSize={92}
       />
        <ProjectIntro
   whatIDid={

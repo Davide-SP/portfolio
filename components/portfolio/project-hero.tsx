@@ -28,6 +28,7 @@ interface ProjectHeroProps {
   image: string;
   title: string;
   titleSize: number;
+  mobileTitleSize?: number;
 }
 
 export default function ProjectHero({
@@ -37,12 +38,13 @@ export default function ProjectHero({
   image,
   title,
   titleSize,
+  mobileTitleSize = titleSize,
 }: ProjectHeroProps) {
   return (
-    <div style={{ width: "100%", paddingLeft: 64, paddingRight: 64, paddingTop: 32, marginBottom: 72 }}>
+    <div className="px-8 md:px-16 pt-8 md:pt-8" style={{ width: "100%", marginBottom: 72 }}>
       {/* Metadata row */}
       <motion.div
-        style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}
+        className="flex flex-col items-center md:items-end mt-12 md:mt-0"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.44, 0, 0.56, 1], delay: 0.6 }}
@@ -67,10 +69,8 @@ export default function ProjectHero({
 
       {/* Title + Hero image grid */}
       <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[70px]"
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 70,
           marginTop: 24,
           alignItems: "center"
         }}
@@ -79,7 +79,7 @@ export default function ProjectHero({
         transition={{ duration: 1.2, ease: [0.42, 0.21, 0, 1] }}
       >
         {/* Hero image */}
-        <div style={{ width: "100%" }}>
+        <div className="order-2 md:order-1" style={{ width: "100%" }}>
   <Image
     src={image}
     alt={company}
@@ -92,16 +92,31 @@ export default function ProjectHero({
 </div>
 
         {/* Title */}
-        <div
-          style={{
-            fontFamily: FONT_TIKTOK,
-            fontSize: titleSize,
-            fontWeight: 600,
-            color: "#000000",
-            letterSpacing: "-0.06em",
-          }}
-        >
-          {title}
+        <div className="order-1 md:order-2 text-center md:text-left">
+          <span
+            className="md:hidden"
+            style={{
+              fontFamily: FONT_TIKTOK,
+              fontSize: mobileTitleSize,
+              fontWeight: 600,
+              color: "#000000",
+              letterSpacing: "-0.06em",
+            }}
+          >
+            {title}
+          </span>
+          <span
+            className="hidden md:block"
+            style={{
+              fontFamily: FONT_TIKTOK,
+              fontSize: titleSize,
+              fontWeight: 600,
+              color: "#000000",
+              letterSpacing: "-0.06em",
+            }}
+          >
+            {title}
+          </span>
         </div>
 
       </motion.div>
