@@ -14,15 +14,15 @@ interface AboutHeroProps {
 export default function AboutHero({ src, alt, children, imageWidth = "100%", textWidth = "100%" }: AboutHeroProps) {
   return (
     <motion.div
-      style={{ padding: "96px" }}
+      className="p-8 md:p-24"
       initial={{ opacity: 0, y: 160 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1.4, ease: [0, 0.56, 0.26, 0.97] }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px", alignItems: "center" }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8" style={{ alignItems: "center" }}>
         {/* Left column: image */}
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div className="order-1" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Image
             src={src}
             alt={alt}
@@ -33,7 +33,7 @@ export default function AboutHero({ src, alt, children, imageWidth = "100%", tex
         </div>
 
         {/* Right column: text */}
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div className="order-2" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <div
             style={{
               fontFamily: "'TikTok Sans', sans-serif",
