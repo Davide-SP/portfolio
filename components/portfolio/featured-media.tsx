@@ -13,14 +13,7 @@ interface FeaturedMediaProps {
 
 export default function FeaturedMedia({ type, src, alt, title, caption, fallbackHref }: FeaturedMediaProps) {
   return (
-    <div
-      style={{
-        paddingTop: 0,
-        paddingLeft: 96,
-        paddingRight: 96,
-        paddingBottom: 64,
-      }}
-    >
+    <div className="pt-0 px-8 md:px-24 pb-8 md:pb-16">
       {title && (
         <h2
           style={{
@@ -36,15 +29,7 @@ export default function FeaturedMedia({ type, src, alt, title, caption, fallback
         </h2>
       )}
 
-      <div
-        style={{
-          width: "100%",
-          height: 700,
-          overflow: "hidden",
-          borderRadius: 8,
-          position: "relative",
-        }}
-      >
+      <div className="w-full h-[400px] md:h-[700px] overflow-hidden rounded-lg relative">
         {type === "iframe" && (
           <iframe
             src={src}

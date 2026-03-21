@@ -61,13 +61,15 @@ export default function CreativeCodingPage() {
             },
           ]}
         />
-
+<div className="hidden md:block">
 <FeaturedMedia 
       type= "iframe"
       src="https://davide-sp.github.io/p5-sketches/good-morning/"
       caption= "A wave distortion experiment, type any text and watch it ripple through a sine-based tile displacement."
       fallbackHref= "https://davide-sp.github.io/p5-sketches/good-morning/"
 />
+</div>
+
 
         <MediaGrid
           title="Animation gallery."
@@ -85,8 +87,6 @@ export default function CreativeCodingPage() {
   <p>As part of my creative coding exploration, I built a simple system to control an RGB LED via Arduino and Serial Monitor. Users can input values from 0 to 255 for each color channel, experimenting with color combinations in real time.</p>
     <br />
     <p>The project introduced me to serial communication and PWM, two core concepts in embedded programming, and reinforced my interest in the connection between physical hardware and software interaction.</p>
-  
-
 </SectionBlock>
 
 <FeaturedMedia 
@@ -94,8 +94,6 @@ export default function CreativeCodingPage() {
       src="/images/coding/arduino-led.mp4"
       
 />
-
-
       </main>
       <Footer />
     </>

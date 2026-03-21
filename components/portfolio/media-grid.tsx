@@ -17,14 +17,7 @@ interface MediaGridProps {
 
 export default function MediaGrid({ items, title }: MediaGridProps) {
   return (
-    <div
-      style={{
-        paddingTop: 48,
-        paddingLeft: 96,
-        paddingRight: 96,
-        paddingBottom: 64,
-      }}
-    >
+    <div className="pt-8 md:pt-12 px-8 md:px-24 pb-8 md:pb-16">
       {title && (
         <h2
           style={{
@@ -41,13 +34,7 @@ export default function MediaGrid({ items, title }: MediaGridProps) {
         </h2>
       )}
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: 24,
-        }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {items.map((item, index) => (
           <div key={index}>
             <div
