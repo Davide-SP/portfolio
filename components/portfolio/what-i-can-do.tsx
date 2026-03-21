@@ -16,7 +16,7 @@ export default function WhatICanDo() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div style={{ paddingTop: 56, paddingLeft: 80, paddingRight: 80, paddingBottom: 80 }}>
+    <div className="pt-14 px-8 md:px-20 pb-8 md:pb-20">
       <p
         style={{
           fontSize: 32,
@@ -31,7 +31,36 @@ export default function WhatICanDo() {
         What I can do.
       </p>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      {/* Mobile layout */}
+      <div className="md:hidden flex flex-col gap-2">
+        {SKILLS.map(({ title, src }) => (
+          <div key={title} className="flex items-center gap-4">
+            <Image
+              src={src}
+              alt={title}
+              width={48}
+              height={48}
+              style={{ borderRadius: 4, objectFit: "cover", flexShrink: 0, width: 48, height: 48 }}
+            />
+            <p
+              style={{
+                fontSize: 32,
+                fontFamily: "'TikTok Sans', sans-serif",
+                fontWeight: 700,
+                fontStyle: "italic",
+                letterSpacing: "-0.08em",
+                color: "#000000",
+                margin: 0,
+              }}
+            >
+              {title}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop layout */}
+      <div className="hidden md:flex flex-col">
         {SKILLS.map(({ title, src }, i) => {
           const isHovered = hoveredIndex === i;
           const isDimmed = hoveredIndex !== null && !isHovered;
@@ -40,6 +69,7 @@ export default function WhatICanDo() {
           return (
             <motion.div
               key={title}
+              className="hidden md:block"
               style={{ position: "relative", textAlign: "center", zIndex: hoveredIndex === i ? 10 : 1 }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
