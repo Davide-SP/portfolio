@@ -20,6 +20,7 @@ export default function FlyingTigerPage() {
           image="/images/tiger/tiger-cover.png"
           title="Flying Tiger Copenaghen"
           titleSize={90}
+          mobileTitleSize={47}
         />
         <ProjectIntro
           whatIDid={<>
