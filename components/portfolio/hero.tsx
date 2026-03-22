@@ -208,7 +208,7 @@ export default function Hero() {
       {/* Physics section */}
       <div
         ref={containerRef}
-        className="px-4 md:px-0 h-[320px] md:h-[480px]"
+        className="px-4 md:px-0 h-[260px] md:h-[480px]"
         style={{
           position: "relative",
           width: "100%",
