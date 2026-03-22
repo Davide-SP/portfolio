@@ -46,7 +46,7 @@ export default function CustomCursor() {
 
   return (
     <div
-      className="fixed rounded-full pointer-events-none"
+      className="hidden md:block fixed rounded-full pointer-events-none"
       style={{
         left: pos.x,
         top: pos.y,

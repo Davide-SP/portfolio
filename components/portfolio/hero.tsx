@@ -21,13 +21,12 @@ const BASE_BODY_STYLE: React.CSSProperties = {
 const PILL_STYLE: React.CSSProperties = {
   ...BASE_BODY_STYLE,
   fontFamily: FONT_MONO,
-  fontSize: 32,
   textTransform: "uppercase",
   color: "#000000",
   background: "#FAFAFA",
   border: "1px solid #8F8F8F",
   borderRadius: 999,
-  padding: "20px 40px",
+  padding: "10px 20px",
   whiteSpace: "nowrap",
   display: "flex",
   alignItems: "center",
@@ -36,23 +35,18 @@ const PILL_STYLE: React.CSSProperties = {
 const RECT_STYLE: React.CSSProperties = {
   ...BASE_BODY_STYLE,
   fontFamily: FONT_MONO,
-  fontSize: 32,
   textTransform: "uppercase",
   color: "#000000",
   background: "#FAFAFA",
   border: "1px solid #8F8F8F",
   borderRadius: 15,
-  padding: "20px 30px",
   whiteSpace: "nowrap",
 };
 
 const CIRCLE_STYLE: React.CSSProperties = {
   ...BASE_BODY_STYLE,
-  width: 96,
-  height: 96,
   borderRadius: 999,
   background: "#000000",
-  padding: 24,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -84,13 +78,14 @@ export default function Hero() {
 
     const wallT = 100;
     const wallOpts = { isStatic: true, friction: 0.5, restitution: 0.3 };
+    const margin = W < 768 ? 16 : 64;
     Matter.World.add(world, [
       // floor
       Matter.Bodies.rectangle(W / 2, H - 20 + wallT / 2, W + wallT * 2, wallT, wallOpts),
-      // left wall — rispetta margine 64px
-      Matter.Bodies.rectangle(64 - wallT / 2, H / 2, wallT, H * 4, wallOpts),
-      // right wall — rispetta margine 64px
-      Matter.Bodies.rectangle(W - 64 + wallT / 2, H / 2, wallT, H * 4, wallOpts),
+      // left wall
+      Matter.Bodies.rectangle(margin - wallT / 2, H / 2, wallT, H * 4, wallOpts),
+      // right wall
+      Matter.Bodies.rectangle(W - margin + wallT / 2, H / 2, wallT, H * 4, wallOpts),
     ]);
 
     type BodyEntry = { body: Matter.Body; el: HTMLDivElement };
@@ -133,7 +128,8 @@ export default function Hero() {
 
     const makeCircle = (el: HTMLDivElement | null, startY: number) => {
       if (!el) return;
-      const r = 48;
+      const isMobile = W < 768;
+      const r = isMobile ? 18 : 48;
       const x = rand(r + 80, W - r - 80);
       const body = Matter.Bodies.circle(x, startY, r, {
         restitution: 0.5,
@@ -212,24 +208,23 @@ export default function Hero() {
       {/* Physics section */}
       <div
         ref={containerRef}
+        className="px-4 md:px-0 h-[320px] md:h-[480px]"
         style={{
           position: "relative",
           width: "100%",
-          height: 480,
           overflow: "hidden",
           marginBottom: -20,
         }}
       >
-        <div ref={elDPD} style={PILL_STYLE}>
+        <div ref={elDPD} style={PILL_STYLE} className="text-[16px] md:text-[32px] md:px-10 md:py-5">
           DIGITAL PRODUCT DESIGNER
         </div>
 
-        <div ref={elPF} style={PILL_STYLE}>
+        <div ref={elPF} style={PILL_STYLE} className="text-[16px] md:text-[32px] md:px-10 md:py-5">
           <span
+            className="w-3 h-3 md:w-[22px] md:h-[22px]"
             style={{
               display: "inline-block",
-              width: 22,
-              height: 22,
               borderRadius: "50%",
               background: "#000000",
               marginRight: 10,
@@ -239,34 +234,35 @@ export default function Hero() {
           PRODUCT FOCUSED
         </div>
 
-        <div ref={elCiao} style={RECT_STYLE}>
+        <div ref={elCiao} style={RECT_STYLE} className="text-[16px] md:text-[32px] p-3 md:px-[30px] md:py-[20px]">
           CIAO!
         </div>
 
-        <div ref={elCC} style={RECT_STYLE}>
+        <div ref={elCC} style={RECT_STYLE} className="text-[16px] md:text-[32px] p-3 md:px-[30px] md:py-[20px]">
           CODE CURIOUS
         </div>
 
-        <div ref={elPizza} style={CIRCLE_STYLE}>
-          <span style={{ fontSize: 48, lineHeight: 1 }}>🍕</span>
+        <div ref={elPizza} style={CIRCLE_STYLE} className="w-9 h-9 p-2 md:w-24 md:h-24 md:p-6">
+          <span className="text-base md:text-[48px]" style={{ lineHeight: 1 }}>🍕</span>
         </div>
 
-        <div ref={elCoder} style={CIRCLE_STYLE}>
-          <span style={{ fontSize: 48, lineHeight: 1 }}>👨🏻‍💻</span>
+        <div ref={elCoder} style={CIRCLE_STYLE} className="w-9 h-9 p-2 md:w-24 md:h-24 md:p-6">
+          <span className="text-base md:text-[48px]" style={{ lineHeight: 1 }}>👨🏻‍💻</span>
         </div>
 
-        <div ref={elArrow} style={CIRCLE_STYLE}>
-          <ArrowDown color="#FFFFFF" size={48} />
+        <div ref={elArrow} style={CIRCLE_STYLE} className="w-9 h-9 p-2 md:w-24 md:h-24 md:p-6">
+          <ArrowDown size={16} color="#FFFFFF" className="md:hidden" />
+          <ArrowDown size={48} color="#FFFFFF" className="hidden md:block" />
         </div>
 
-        <div ref={elAsterisk} style={CIRCLE_STYLE}>
+        <div ref={elAsterisk} style={CIRCLE_STYLE} className="w-9 h-9 p-2 md:w-24 md:h-24 md:p-6">
           <span
             style={{
               fontFamily: FONT_MONO,
-              fontSize: 56,
               color: "#FFFFFF",
               lineHeight: 1,
             }}
+            className="text-base md:text-[56px]"
           >
             *
           </span>
@@ -284,9 +280,9 @@ export default function Hero() {
         }}
       >
         <div
+          className="text-[76px] md:text-[160px]"
           style={{
             fontFamily: FONT_TIKTOK,
-            fontSize: 160,
             fontWeight: 700,
             textAlign: "center",
             lineHeight: 1,
@@ -312,9 +308,9 @@ export default function Hero() {
       >
         <button
           onClick={scrollToDescription}
+          className="text-base md:text-[32px]"
           style={{
             fontFamily: FONT_TIKTOK,
-            fontSize: 32,
             color: "#000000",
             background: "none",
             border: "none",
@@ -333,14 +329,12 @@ export default function Hero() {
       {/* Description section */}
       <div
         ref={descriptionRef}
+        className="text-[30px] md:text-[40px] px-8 md:px-16 md:max-w-[50%]"
         style={{
           scrollMarginTop: 32,
           fontFamily: FONT_TIKTOK,
-          fontSize: 40,
           color: "#000000",
-          marginLeft: 64,
           marginBottom: 120,
-          width: 500,
           marginTop: 120,
         }}
       >
