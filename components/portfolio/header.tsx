@@ -39,18 +39,20 @@ export default function Header() {
         }}
       >
         {/* Left: two-line text block */}
-        <div
-          style={{
-            fontFamily: "'TikTok Sans', sans-serif",
-            fontSize: 20,
-            fontWeight: 400,
-            color: "#000000",
-            lineHeight: "1.3",
-          }}
-        >
-          <div>DIGITAL PRODUCT DESIGNER</div>
-          <div>BASED IN DENMARK</div>
-        </div>
+        <a href="/" style={{ textDecoration: "none" }}>
+          <div
+            style={{
+              fontFamily: "'TikTok Sans', sans-serif",
+              fontSize: 20,
+              fontWeight: 400,
+              color: "#000000",
+              lineHeight: "1.3",
+            }}
+          >
+            <div>DIGITAL PRODUCT DESIGNER</div>
+            <div>BASED IN DENMARK</div>
+          </div>
+        </a>
 
         {/* Right: nav links (desktop) + hamburger */}
         <div className="flex items-center gap-6">
@@ -87,11 +89,11 @@ export default function Header() {
             <div style={{ position: "relative", width: 24, height: 24 }}>
               <img
                 src="/images/menu-icon/menu-icon-close.svg"
-                style={{ position: "absolute", opacity: open ? 0 : 1, transition: "opacity 0.3s ease" }}
+                style={{ position: "absolute", opacity: open ? 0 : 1, transition: "opacity 0.4s cubic-bezier(0, 0.56, 0.26, 0.97)" }}
               />
               <img
                 src="/images/menu-icon/menu-icon-open.svg"
-                style={{ position: "absolute", opacity: open ? 1 : 0, transition: "opacity 0.3s ease" }}
+                style={{ position: "absolute", opacity: open ? 1 : 0, transition: "opacity 0.4s cubic-bezier(0, 0.56, 0.26, 0.97)" }}
               />
             </div>
           </button>
