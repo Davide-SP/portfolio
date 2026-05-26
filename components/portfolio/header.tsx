@@ -43,8 +43,8 @@ export default function Header() {
           <div
             style={{
               fontFamily: "'TikTok Sans', sans-serif",
-              fontSize: 20,
-              fontWeight: 400,
+              fontSize: 24,
+              fontWeight: 600,
               color: "#000000",
               lineHeight: "1.3",
             }}
