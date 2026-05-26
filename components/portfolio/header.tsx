@@ -30,7 +30,7 @@ export default function Header() {
     <>
       <motion.header
         className={`flex items-center justify-between bg-white z-50 px-4 md:px-8 ${open ? "fixed top-0 left-0 right-0" : "relative"} md:fixed md:top-0 md:left-0 md:right-0`}
-        style={{ paddingTop: 32 }}
+        style={{ paddingTop: 32, paddingBottom: 32 }}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -102,7 +102,7 @@ export default function Header() {
       </motion.header>
 
       {/* Spacer for fixed header */}
-      <div className="h-[96px]" />
+      <div className="h-[128px]" />
 
       {/* Mobile curtain menu */}
       <AnimatePresence>
