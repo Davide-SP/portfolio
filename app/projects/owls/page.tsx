@@ -20,6 +20,7 @@ export default function OwlsPage() {
           image="/images/owls/owls-1.png"
           title="Owls"
           titleSize={110}
+          mobileTitleSize={82}
         />
         <ProjectIntro
           whatIDid={<>

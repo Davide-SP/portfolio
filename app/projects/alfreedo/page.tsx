@@ -22,6 +22,7 @@ export default function AlfreeedoPage() {
           image="/images/alfreedo/alfreedo-cover.png"
           title="Alfreedo"
           titleSize={110}
+          mobileTitleSize={82}
         />
         <ProjectIntro
           whatIDid={<>

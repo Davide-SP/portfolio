@@ -49,8 +49,9 @@ export default function Header() {
               lineHeight: "1.3",
             }}
           >
-            <div>DIGITAL PRODUCT DESIGNER</div>
-            <div>BASED IN DENMARK</div>
+            <div>DS</div>
+            {/* <div>DIGITAL PRODUCT DESIGNER</div>
+            <div>BASED IN DENMARK</div> */}
           </div>
         </a>
 

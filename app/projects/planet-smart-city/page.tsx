@@ -19,6 +19,7 @@ export default function PlanetSmartCityPage() {
           image="/images/planet/planet-cover.png"
           title="Smart Energy Management"
           titleSize={90}
+          mobileTitleSize={55}
         />
         <ProjectIntro
           whatIDid={<>
