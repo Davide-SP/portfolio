@@ -40,7 +40,7 @@ export default function Footer() {
         {[
           { label: "spataro.davide@gmail.com", href: "mailto:spataro.davide@gmail.com" },
           { label: "LinkedIn", href: "https://linkedin.com/in/davidespataro" },
-          { label: "GitHub", href: "https://github.com/davidespataro" },
+          { label: "GitHub", href: "https://github.com/Davide-SP" },
         ].map(({ label, href }) => (
           <a
             key={label}
